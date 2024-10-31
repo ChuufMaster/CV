@@ -1,0 +1,247 @@
+\documentclass[11pt]{spidercv}
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+\usepackage{fontspec}
+% \setmainfont{JetBrainsMono Nerd Font }
+% \setmonofont{JetBrainsMono Nerd Font Mono}
+
+\newfontfamily\JetBrains{JetBrainsMono Nerd Font Mono}[
+Path            =   /usr/share/fonts/TTF/,
+Extension       =   .ttf,
+UprightFont     =   *-Regular,
+BoldFont        =   *-Bold,
+ItalicFont      =   *-Italic,
+BoldItalicFont  =   *-BoldItalic
+]  
+
+\newcommand*{\newIcon}[2]{\newcommand*{#1}{\large\JetBrains#2}}
+
+
+\newIcon{\iconTest}{^^^^e620}
+
+\newIcon{\iconLua}{^^^^e620}
+
+\newIcon{\iconVim}{^^^^e7c5}
+
+\newIcon{\iconNeovim}{^^^^f36f}
+
+\newIcon{\iconCsharp}{^^^^e648}
+
+\newIcon{\iconDotnet}{^^^^f0aae}
+
+\newIcon{\iconArch}{^^^^f303}
+
+\newIcon{\iconHyprland}{^^^^f359}
+
+\newIcon{\iconCplusplus}{^^^^e61d}
+
+\newIcon{\iconBash}{^^^^ebca}
+
+\newIcon{\iconTex}{^^^^e69b}
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TOP BAR
+%----------------------------------------------------------------------------------------
+\begin{TopBar}{\ColorTextSide}
+	\Name{\ColorHighlight}
+	{Ivan Horak}
+	{Student}
+	{\number\numexpr\year-2002\relax~years old}
+
+	%%% Contact
+	\TextSeparator{\ColorHighlight}{Contact}
+	\begin{DoubleColumns}
+		\begin{ItemList}{\ColorHighlight}
+			\item [\Large\faAt]
+			\href{mailto:ivanhorak20@gmail.com}{ivanhorak20@gmail.com}
+			\item [\Large\faMobile] +27 79 397 9872
+			\item [\Large\faMapMarker] World
+		\end{ItemList}
+		\nextcolumn
+		\begin{ItemList}{\ColorHighlight}
+			\item [\Large\faGithub] \href{https://github.com/ChuufMaster}{Ivan Horak - ChuufMaster}
+			\item [\Large\faLinkedin] \href{https://www.linkedin.com/in/ivan-horak-computer-science}{linkedin}
+		\end{ItemList}
+	\end{DoubleColumns}
+
+	%%% Interests
+	\TextSeparator{\ColorHighlight}{Interests}
+	\begin{TripleColumns}
+		\begin{ItemList}{\ColorHighlight}
+			\item [\Large\iconArch] Linux (Arch btw)
+		\end{ItemList}
+		\nextcolumn
+		\begin{ItemList}{\ColorHighlight}
+			\item [\Large\iconNeovim] Neovim
+		\end{ItemList}
+		\nextcolumn
+		\begin{ItemList}{\ColorHighlight}
+			\item [] Coding always
+		\end{ItemList}
+	\end{TripleColumns}
+\end{TopBar}
+
+
+
+%----------------------------------------------------------------------------------------
+%	SIDE BAR
+%----------------------------------------------------------------------------------------
+\begin{SideBar}{\ColorBackground}{\ColorTextSide}
+
+	%%% Soft skills
+	\TextSeparatorBis{\ColorHighlight}{\faUser}{Soft skills}
+
+	\Label{\ColorHighlight}{Critical Thinking}
+	\Label{\ColorHighlight}{Communication}
+	\Label{\ColorHighlight}{Interpersonal}
+	\Label{\ColorHighlight}{Problem Solving}
+	\Label{\ColorHighlight}{Teamwork}
+
+	\vspace*{1cm}
+
+	%%% Hard skills
+	\TextSeparatorBis{\ColorHighlight}{\faCogs}{Hard skills}
+	\begin{ItemList}{\ColorHighlight}
+		\item [\faCode] C\#, .Net, \faJs, \faPython
+		\item [\faFileCode]  skill, skill, skill, skill
+		\item [\faCubes]  skill, skill, skill, skill
+		\item [\faEdit]  skill, skill, skill, skill
+		\item [\faVideo]  skill, skill, skill, skill
+		\item [\faCog]  skill, skill, skill, skill
+	\end{ItemList}
+
+	\vspace*{1cm}
+
+	%%% Spider
+	\TextSeparatorBis{\ColorHighlight}{\faTerminal}{Game}
+
+	\begin{SpiderDiagram}{\ColorTextSide}{\ColorHighlight}
+		\addSkill{A}{5}
+		\addSkill{B}{3}
+		\addSkill{C}{2}
+		\addSkill{D}{4}
+		\addSkill{E}{5}
+		\addSkill{F}{3}
+	\end{SpiderDiagram}
+
+	\vspace*{1cm}
+
+	%%% Languages
+	\TextSeparatorBis{\ColorHighlight}{\faLanguage}{Languages}
+
+	\begin{SkillGauges}{\ColorHighlight}
+		\addGauge[\iconCplusplus]{C++}{4}
+		\addGauge[\iconLua]{Lua}{4}
+		\addGauge[\faJs]{Javascipt}{4}
+		\addGauge[\faMicrosoft]{.Net}{4}
+		\addGauge[\faPython]{Python}{3}
+		\addGauge[\faJava]{Java}{3}
+		\addGauge[\iconBash]{Bash}{4}
+		\addGauge[\faFilePdf]{\LaTeX}{4}
+	\end{SkillGauges}
+\end{SideBar}
+
+
+
+%----------------------------------------------------------------------------------------
+%	Picture
+%----------------------------------------------------------------------------------------
+\DefineProfile{\ColorOther}{\ColorTextSide}{~/wallpapers/arch-chan_to.png}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	Main
+%----------------------------------------------------------------------------------------
+\begin{MainPart}
+
+	%%% Experiences 
+	\MainTitleBis{\ColorHighlight}{\ColorTextMain}{Experiences}{\faSuitcase}
+	\Experience
+	{\ColorHighlight}
+	{Useful Director}
+	{Nice Company}
+	{2015-\faUndo}
+	{
+		Write here your description.\\
+		\lorem\\
+		\lorem
+	}
+	\Experience
+	{\ColorHighlight}
+	{Teacher}
+	{Nice School}
+	{2004-2015}
+	{
+		Write here your hi description.\\
+		\lorem
+	}
+	\Experience
+	{\ColorHighlight}
+	{Happiness manager}
+	{Nowhere}
+	{2002}
+	{
+		Write here your description.\\
+		\lorem\\
+		\lorem
+	}
+
+
+
+	%%% Education
+	\MainTitleBis{\ColorHighlight}{\ColorTextMain}{Education}{\faGraduationCap}
+	\Experience
+	{\ColorHighlight}
+	{Bsc Information and Knowledge Systems}
+	{University of Pretoria}
+	{2024}
+	{
+		Write here your description.\\
+		\lorem
+	}
+	\Experience
+	{\ColorHighlight}
+	{LOL degree}
+	{Nice university}
+	{1902}
+	{
+		Write here your description.\\
+		\lorem
+	}
+	\Experience
+	{\ColorHighlight}
+	{EZ degree}
+	{Nice university}
+	{1901}
+	{
+		Write here your description.\\
+		\lorem\\
+		\lorem
+	}
+
+
+	%%% Activities
+	\MainTitleBis{\ColorHighlight}{\ColorTextMain}{Activities}{\faUsers}
+	\vspace*{0.5cm}
+	\begin{DoubleColumns}
+		\begin{ItemList}{\ColorHighlight}
+			\item [] Doing LaTex templates
+			\item [] Playing video games
+			\item Coding plugins
+		\end{ItemList}
+		\nextcolumn
+		\begin{ItemList}{\ColorHighlight}
+			\item [] Other fun stuff
+		\end{ItemList}
+	\end{DoubleColumns}
+
+\end{MainPart}
+
+
+
+\end{document}
